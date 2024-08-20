@@ -40,13 +40,13 @@ while "_" in unknown_word and lives > 0:
     if guess in listword:
         for i in range(len(listword)):
             if guess in previous_guesses and listword.count(guess) == previous_guesses.count(guess):
-                print("You already guessed that, try another letter!")
+                print("Try another letter!")
                 break
             elif guess == listword[i]:
                 unknown_word[i] = listword[i]
                 print(f"Your word is {len(unknown_word)} letters long and looks like this currently: {''.join(unknown_word)}.")
                 previous_guesses.append(guess)
-                break
+                
             else:
                 continue
     elif guess.lower() == word.lower():
